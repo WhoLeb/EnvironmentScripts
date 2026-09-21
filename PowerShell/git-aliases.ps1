@@ -7,6 +7,8 @@ function ga  { git add @args }
 function gaa { git add . }
 function gs  { git status -s }
 function gst { git stash @args }
+function gstp{ git stash pop }
+function gd  { git diff }
 function gl  { param([int]$n = 15) git log --oneline --graph --decorate -$n }
 function gco { git checkout @args }
 function gb  { git branch @args }
@@ -17,5 +19,5 @@ function gcm {
     param([string]$msg)
     git commit -m $msg
 }
-function gca { git commit --amend @args }
+function gca  { git commit --amend @args }
 function gcan { git commit --amend --no-edit }
